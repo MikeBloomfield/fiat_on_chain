@@ -1,0 +1,379 @@
+/*==========  Desktop First  ==========*/
+
+// /* Large Devices, Wide Screens */
+@media (max-width : 1200px)
+    .grid
+        &__wrapper
+            grid-template-columns: 1fr
+            grid-template-rows: 5fr
+            gap: 30px
+            max-width: 768px
+            margin: auto
+        &__item
+            grid-column: 1/2
+            justify-content: center
+            gap: 30px
+            &-title
+                text-align left
+                br
+                    display none
+            &-desc
+                br
+                    display none
+            &-1
+                grid-row: 1/2
+            &-2
+                grid-row: 2/3
+            &-3
+                grid-row: 3/4
+            &-4
+                grid-row: 4/5
+                .grid__item-pic
+                    max-width: 330px
+                    top: -30px
+
+            &-5
+                grid-row: 5/6
+                
+    .line
+        &__wrapper
+            align-items: center
+            flex-direction: column
+            gap: 30px
+        &__item:nth-child(1)
+            margin-right 0
+        &__item:nth-child(2)
+            margin-right 0
+    .serve
+        padding-bottom 600px
+        &__wrapper
+            flex-direction: column
+            align-items: center
+        &__right
+            &-inner
+                top: 100px
+    
+@media (max-width : 1100px)
+    .hero
+        &__pic
+            width: 254px
+            top: -70px
+    .footer
+        &__mail
+            font-size 58px
+// /* Medium Devices, Desktops */
+@media (max-width : 992px)
+    h1
+        font-size 36px
+        line-height 40px
+        max-width: 256px
+// /* Small Devices, Tablets */
+@media (max-width : 768px)
+
+    .main-wrapper
+        background: linear-gradient(180deg, #FFFFFF 6.14%, #DFDFDF 60.85%);
+
+    h2
+        font-size 42px
+        line-height 47px
+        text-align center
+
+    p
+        font-size 16px
+        line-height 28px
+
+    .hero
+        padding: 108px 0 15px
+        &__wrapper
+            flex-direction: column
+            align-items: center
+            margin-bottom 300px
+        &__title
+            &-desktop
+                display none
+            &-mobile
+                display block
+                margin-bottom 10px
+        &__subtitle
+            text-align center
+            font-size 16px
+            line-height 19px
+        &__pic
+            right calc(254px + 0.5 * (100% - 768px))
+            top: 30px
+        &__bottom
+            flex-direction: column-reverse
+            align-items: center
+            gap: 65px
+    .header
+        padding: 10px 0
+        &.fixed
+            padding: 16px 0
+        &__logo
+            max-width: 120px
+        &__list
+            position: fixed
+            background: $white
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            margin-right 0
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            gap: 50px
+            opacity 0
+            display flex
+            transform: translateX(-150%)
+            &-link
+                font-size 16px
+                line-height 19px
+        &__burger
+            display flex
+    .grid
+        padding: 31px 0 60px
+        &__item
+            padding: 85px 30px 75px
+            &-title
+                max-width 500px
+                font-weight 500
+                line-height 47px
+    .serve
+        padding-bottom: 490px
+        &__subtitle
+            font-size 28px
+            line-height 29px
+            margin-bottom 16px
+            padding-left 50px
+        &__right
+            width: 100%
+            &-inner
+                left: calc(235px + 0.5 * (100% - 768px))
+                padding: 45px 10px 31px 32px
+                width: 300px
+                height: 405px
+            &-pic
+                width: 50px
+                height: 50px
+                top: 50px
+                left: 11px
+                img
+                    width: 28px
+                    height: 28px
+        &__list
+            &-item
+                font-size 16px
+                line-height 19.2px
+                padding-left 50px
+                &:not(:last-child)
+                    margin-bottom 20px
+        &__left
+            max-width: 435px
+        .slick-list.draggable
+            left: 0
+            min-width: auto
+        &__item
+            padding-left 58px
+            padding-top 0
+            left: 0
+            min-height: 205px
+            &-title
+                font-size 24px
+                line-height 42px
+                margin-bottom 5px
+            &-desc
+                font-size 16px
+                line-height 28px
+                max-width: 400px
+                &:before
+                    left: -37px
+            &-pic
+                width: 50px
+                height: 50px
+                img
+                    width: 17px
+                    height: 17px
+        .slick-dots li button, .slick-dots li, .slick-dots li button:before
+            width: 35px
+            height: 4px
+        .slick-dots
+            text-align center
+            bottom: -20px
+    
+    .line
+        padding: 0 0 50px
+    
+    
+    .news
+        &__title
+            margin-bottom 16px
+        &__item
+            min-width: 92vw!important
+            gap: 28px
+            padding: 25px 19px 28px 30px
+            justify-content: space-between
+            &-top
+                height: 40px
+            &-link
+                color: transparent
+                height: 40px
+                &:before
+                    width: 32px
+                    height: 32px
+                    top: 4px
+                    background-image: url(../img/main/arrow-mobile.svg)
+            &-margin
+                min-width: 75px
+        &__wrapper
+            flex-direction: row
+            transform: translateX(0)
+        &__inner
+            height: 360px
+            overflow-y: hidden
+        &__desc
+            font-size 14px
+        &__top, &__bottom
+            animation: none
+            &-mobile
+                display flex
+            &-desktop
+                display none
+
+    
+    .footer
+        padding: 247px 0 81px
+        &__top
+            flex-direction: column-reverse
+            margin-bottom 7px
+        &__mail
+            font-size 23px
+            line-height 27px
+            margin-bottom 150px
+            display block
+            text-align center
+        &__bottom
+            flex-direction: column
+            gap 50px
+            &-left
+                align-items: center
+        &__pic
+            width: 174px
+            right: calc(300px + 0.5 * (100% - 768px))
+            top: -193px
+
+
+        
+@media (max-width : 660px)
+    .table
+        &__header
+            &-item
+                font-size 13px
+                line-height 15.6px
+        &__body
+            &-item
+                gap: 5px
+                font-size 11px
+                line-height 13.2px
+       
+@media (max-width : 568px)
+    .table
+        .wrapper
+            padding: 0
+        .table__column-2 .table__column-item:last-child
+            position relative
+            &:before
+                content: ""
+                position absolute
+                width: 100%
+                height: 9px
+                background: #6620df
+                display block
+                bottom: -6px
+        &__table
+            display none
+        &__column
+            &-1
+                &:not(:first-child)
+                    position relative
+                    top 3px
+            &-item
+                height: 60px
+                display flex
+                justify-content: center
+                align-items: center
+                padding: 0 15px!important
+        &__mobile
+            display flex
+            position relative
+            &-pic
+                position absolute
+                bottom: -5px
+                right: 20px
+                animation: table 3s ease-in-out infinite
+        &__scroll
+            display flex
+            overflow-x: scroll
+            &::-webkit-scrollbar
+                display none
+
+@media (max-width : 480px)
+    .line
+        &__wrapper
+            padding 30px 25px
+        &__item
+            font-size 16px
+            line-height 19px
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3)
+                gap: 15px
+    .serve
+        &__title
+            margin-bottom 14px
+            br
+                display block
+        &__left
+            gap: 30px
+            max-width: 320px
+        &__item
+            max-width: 320px
+            min-height: 280px
+        
+    .grid
+        &__item
+            justify-content: space-between
+            &-1
+                .grid__item-pic
+                    max-width: 188px
+                    top: -18px
+            &-2
+                .grid__item-pic
+                    max-width: 216px
+            &-3
+                .grid__item-pic
+                    max-width: 197px
+            &-4
+                .grid__item-pic
+                    width: 303px
+            &-5
+                .grid__item-pic
+                    max-width: 163px
+                    bottom: 48px
+    .table
+        &__column
+            height: 454px
+
+
+
+// /* Custom, iPhone Retina */
+@media (max-width : 390px)
+    .line
+        &__wrapper
+            align-items: flex-start
+// @media (max-width : 375px)
+@media (max-width : 320px)
+    .news
+        &__inner
+            height: 390px
+/**/

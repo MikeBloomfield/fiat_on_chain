@@ -1,0 +1,105 @@
+.footer
+	width 100%
+	min-width $min-width
+	padding: 177px 0 59px
+	&__top
+		display flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom 32px
+		&-right
+			position relative
+	&__title
+		font-size 32px
+		line-height 38.4px
+	&__pic
+		width: 226px
+		position absolute
+		top: -183px
+		right: calc(742px + 0.5 * (100% - 1440px))
+		mix-blend-mode: luminosity
+		transform: rotate(0deg)
+		transition: .4s
+		&.active
+			transform: rotate(-45deg)
+	&__mail
+		font-size 86px
+		line-height 103.2px
+		margin-bottom 162px
+		display inline-block
+	&__bottom
+		display flex
+		justify-content: space-between
+		align-items: center
+		&-left, &-right
+			display flex
+			flex-direction: column
+		&-center
+			max-width: 80px
+			transition: $transition
+			&:hover
+				transform: translateY(-5px)
+		&-left
+			gap: 12px
+			p
+				font-size 12px
+				line-height 14.4px
+				color: #979797
+				text-transform uppercase
+			a
+				text-transform uppercase
+				color #979797
+				font-size 12px
+				line-height 14.4px
+				text-decoration underline
+				&:hover
+					opacity .7
+		&-right
+			gap: 15px
+			align-items: center
+			a
+				width: 135px
+				display flex
+				justify-content: center
+				align-items: center
+				background: rgba(2, 19, 21, .48);
+				border-radius: 6px;
+				color: #FFFFFF;
+				height: 40px
+				span
+					font-size 12px
+					line-height 14.4px
+					padding-right 14px
+					position relative
+					&:before
+						content: ""
+						display block
+						position absolute
+						top: 0
+						right: 0
+						background: url(../img/main/footer-arrow.svg)
+						width: 7px
+						height: 13px
+				&:hover
+					span
+						&:before
+							animation: arrow 4s infinite ease-in-out
+			p
+				font-size 12px
+				line-height 14.4px
+				letter-spacing: 2%
+				text-transform uppercase
+				padding-left 12px
+				position relative
+				color: #244B56
+				&:before
+					content: ""
+					display block
+					top: 2px
+					left: 0
+					position absolute
+					background: url(../img/main/copyright.svg)
+					width: 10px
+					height: 10px
+
+

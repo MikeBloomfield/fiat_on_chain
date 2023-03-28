@@ -1,0 +1,34 @@
+font($font-s, $font-h, $font-c, $font-f, $font-w) 
+	font-size: $font-s
+	line-height: $font-h
+	font-family: $font-f
+	color: $font-c
+	font-weight: $font-w
+
+
+rem($px) 
+	return unit($px/16, 'rem')
+em($px) 
+	return unit($px/16, 'em')
+div($one, $two)
+	return unit($one / $two, 'em')
+av(property, startSize, minSize)
+	addSize= startSize - minSize;
+	{property}: startSize px;	
+	@media(max-width: $maxw  px)
+		{property}: "calc(%spx +  %s * ((100vw - 375px) / (%s - 375)))" % (minSize addSize $maxw)
+
+// adaptive-value(property, startSize, minSize, type)
+//   addSize= startSize - minSize;
+//   if type== 1
+//     {property}: startSize px;	
+//     @media(max-width: $maxWidthContainer  px)
+//       {property}: "calc(%spx +  %s * ((100vw - 320px) / (%s - 320)))" % (minSize addSize $maxWidthContainer)
+
+//   else if type== 2
+//     {property}: startSize px;
+//     @media(min-width: $maxWidthContainer  px)
+//       {property}: "calc(%spx +  %s * ((100vw - 320px) / (%s - 320)))" % (minSize addSize $maxWidth)
+
+//   else
+//     {property}: "calc(%spx +  %s * ((100vw - 320px) / (%s - 320)))" % (minSize addSize $maxWidth)

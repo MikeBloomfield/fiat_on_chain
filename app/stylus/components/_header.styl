@@ -1,0 +1,92 @@
+.header
+	padding: 53px 0
+	position fixed
+	z-index 500
+	width 100%
+	min-width $min-width
+	transition: $transition
+	&.fixed
+		padding: 10px 0
+		background: rgba(255,255,255,.6)
+		backdrop-filter: blur(5px)
+	&__logo
+		max-width: 164px
+		position relative
+		z-index 999
+		transition: $transition
+	&__wrapper
+		display flex
+		justify-content: space-between
+		align-items: center
+	&__list
+		display flex
+		gap: 37px
+		margin-right 11px
+		transform: translateY(0)
+		opacity 1
+		transition: $transition
+		transition-property: opacity 
+		&-link
+			position relative
+			font-size 14px
+			line-height 17px
+			font-weight 600
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(
+				to left,
+				#000,
+				#000 50%,
+				#00B289 50%);
+			background-size: 200% 100%;
+			background-position: 100%;
+			transition: all 0.2s ease-in-out;
+			&:hover
+				background-position: 0%;
+				background-image: linear-gradient(
+				to left,
+				#000 50%,
+				#00B289 50%,
+				#00B289
+				);
+			&.active
+				background-position: 0%;
+	&__burger
+		width: 20px
+		height: 12px
+		display flex
+		justify-content: center
+		align-items: center
+		display none
+		position relative
+		z-index 999
+		&-item
+			width: 100%
+			height: 3px
+			position relative
+			background: #021315
+			transition: $transition
+			&:before
+				content: ""
+				width: 100%
+				height: 3px
+				background: #021315
+				position absolute
+				top: 9px
+				transition: $transition
+.header.active
+	.header__list
+		width: 100vw
+		height: 100vh
+		z-index 998
+		opacity 1
+		transform: translate(0)
+	.header__burger
+		&-item
+			transform: rotate(45deg)
+			&:before
+				transform: rotate(-90deg)
+				top: 0
+
+
+	

@@ -1,0 +1,20 @@
+m-font-face( $font-family = "Arial", $file-path = "", $local-name = "", $weight, $style = normal) {
+	@font-face {
+		font-family: $font-family;
+		src: url($file-path + '.eot');
+		src: local($local-name),
+			 url($file-path + '.eot?#iefix') format('embedded-opentype'),
+			 url($file-path + '.woff2') format('woff2'),
+			 url($file-path + '.woff') format('woff'),
+			 url($file-path + '.ttf') format('truetype');
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+}
+
+
+m-font-face("Surt", "../fonts/Surt/Surt-Medium", "Surt Medium", 500);
+m-font-face("Surt", "../fonts/Surt/Surt-SemiBold", "Surt SemiBold", 600);
+m-font-face("Surt", "../fonts/Surt/Surt-Bold", "Surt Bold", 700);
+m-font-face("IBM Plex Mono", "../fonts/IBM Plex Mono/IBMPlexMono-Medium", "IBMPlexMono Medium", 500);
